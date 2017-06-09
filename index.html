@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keys Generator</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+var inputValue = document.getElementById('input').value;
+
+function keysGenerator(quantity) {
+	var letters = "abcdefghijklmnopqrstuvwxyz";
+	var firstPart = "";
+	var secondPart = "";
+	var thirdPart = "";
+	var fourthPart = "";
+	var keys = [];
+	
+	for ( var i = 0; i < quantity; i++ ) {
+		
+		for ( var j = 0; j < 4; j++ ) {
+			firstPart += Math.floor(Math.random()*10).toString();
+			secondPart += letters[Math.floor(Math.random() * 26)];
+			thirdPart += Math.floor(Math.random()*10).toString();
+			fourthPart += letters[Math.floor(Math.random() * 26)];
+		}
+
+		keys.push(firstPart + '-' + secondPart + '-' + thirdPart + '-' + fourthPart);
+
+	var firstPart = "";
+	var secondPart = "";
+	var thirdPart = "";
+	var fourthPart = "";
+
+	}
+
+return keys;
+}
+
+</script>
+
+
+</body>
+</html>
